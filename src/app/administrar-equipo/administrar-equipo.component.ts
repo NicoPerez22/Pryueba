@@ -12,4 +12,5 @@ export class AdministrarEquipoComponent implements OnInit {
   ngOnInit() {
   }
 
+  currentOrientation = 'horizontal';
 }

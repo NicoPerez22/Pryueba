@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reportar-partido',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportarPartidoComponent implements OnInit {
 
-  constructor() { }
+  selecjugadores = false;
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  }
+
+  seleccionarJugador() {
+    this.selecjugadores = true;
+  }
+
+  reporteConfirmado() {
+    this.router.navigateByUrl("/admin-equipo")
   }
 
 }
