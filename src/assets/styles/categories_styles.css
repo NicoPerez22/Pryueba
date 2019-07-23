@@ -1189,6 +1189,16 @@ section
 {
 	margin-right: 5px;
 }
+.sidebar_categories .tabset1 {
+    font-size: 14px;
+	line-height: 40px;
+	color: #51545f;
+}
+  
+.sidebar_categories .tabset1 a.nav-link.active {
+    color: #b5aec4;
+    margin-right: 5px;
+}
 #slider-range
 {
 	margin-left: 7px !important;
@@ -3965,8 +3975,8 @@ pre code
 .table .thead-dark th
 {
     color: #f8f9fe;
-    border-color: #1f3a68; 
-    background-color: #172b4d;
+    border-color: #050505; 
+    background-color: #000000;
 }
 
 .table .thead-light th
@@ -3979,7 +3989,7 @@ pre code
 .table-dark
 {
     color: #f8f9fe;
-    background-color: #172b4d;
+    background-color: #000000;
 }
 .table-dark th,
 .table-dark td,

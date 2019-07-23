@@ -16,7 +16,7 @@
 </head>
 
 
-<header class="header trans_300">
+<header class="header trans_300" *ngFor="let u of users">
 
 		<!-- Top Navigation -->
 		<!-- Main Navigation -->
@@ -33,7 +33,7 @@
                                 <li><a  [routerLink]="['/home']" routerLinkActive="router-link-active" >INICIO</a></li>
                                 
                                 <li>
-									<a [routerLink]="['/administrar-equipo']" routerLinkActive="router-link-active">
+									<a [routerLink]="['/torneo']" routerLinkActive="router-link-active">
 										TORNEOS
 										<i class="fa fa-angle-down"></i>
 									</a>

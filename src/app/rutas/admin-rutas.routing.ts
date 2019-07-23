@@ -4,10 +4,12 @@ import { AdministrarEquipoComponent } from '../administrar-equipo/administrar-eq
 import { ReportarPartidoComponent } from '../administrar-equipo/reportar-partido/reportar-partido.component';
 import { LoginComponent } from '../login/login.component';
 import { ProfileComponent } from '../profile/profile.component';
+import { TorneoComponent } from '../torneo/torneo.component';
 
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'home',      component: HomeComponent },
+    { path: 'torneo',      component: TorneoComponent },
     { path: 'administrar-equipo',      component: AdministrarEquipoComponent },
     { path: 'reportar',      component: ReportarPartidoComponent },
     { path: 'login',      component: LoginComponent },

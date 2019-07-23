@@ -4,7 +4,10 @@ export class User {
     username: string;
     password: string;
     email: string;
-    token: string;   
+    token: string;  
+    equipo: String;
+    torneo: string;
+    foto: string;
 
 
     constructor(user?: User) {

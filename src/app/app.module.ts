@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './Shell/navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TorneoComponent } from './torneo/torneo.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReportarPartidoComponent,
     LoginComponent,
     NavbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    TorneoComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
     AppRoutingModule,

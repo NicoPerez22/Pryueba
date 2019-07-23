@@ -78,7 +78,7 @@
                                                 <option selected>Seleccione resultado</option>
                                                 <option>1</option>
                                                 <option>2</option>
-                                                <option>3</option>s
+                                                <option>3</option>
                                               </select>
                                             </div>
                                       </div>
@@ -127,191 +127,106 @@
                             <!-- Projects table -->
                             <div class="table-responsive">
                                 <!-- Projects table -->
-                                <table class="table align-items-center table-flush">
-                                  <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                            <div class="form-group col-md-12">
-                                                <label for="inputState">Juagdor</label>
-                                                <select id="inputState" class="form-control">
-                                                  <option selected>Seleccione Juagdor</option>
-                                                  <option>1</option>
-                                                  <option>2</option>
-                                                  <option>3</option>
-                                                </select>
-                                              </div>
-                                              </div>
-                                        </td>
-                                        <td>
-                                          <div class="d-flex align-items-center">
-                                              <div class="form-group col-md-12">
-                                                  <label for="inputState">Posicion</label>
-                                                  <select id="inputState" class="form-control">
-                                                    <option selected>Seleccione Posicion</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>s
-                                                  </select>
-                                                </div>
-                                          </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="form-group col-md-12">
-                                                    <label for="inputState">Goles</label>
-                                                    <select id="inputState" class="form-control">
-                                                      <option selected>Seleccione Goles</option>
-                                                      <option>1</option>
-                                                      <option>2</option>
-                                                      <option>3</option>s
-                                                    </select>
-                                                  </div>
-                                            </div>
-                                          </td>
-                                          <td>
-                                              <div class="d-flex align-items-center">
-                                                  <div class="form-group col-md-12">
-                                                      <label for="inputState">Asistencias</label>
-                                                      <select id="inputState" class="form-control">
-                                                        <option selected>Seleccione Asistencias</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>s
-                                                      </select>
-                                                    </div>
-                                              </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="inputState">Tarjetas</label>
-                                                        <select id="inputState" class="form-control">
-                                                          <option selected>Seleccione tarjetas</option>
-                                                          <option>1</option>
-                                                          <option>2</option>
-                                                          <option>3</option>s
-                                                        </select>
-                                                      </div>
-                                                </div>
-                                              </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <button (click)="AdminEquipo()" type="button" class="btn btn-success">Enviar</button>
-                                                </div>
-                                            </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
+                                <form #reportar="ngForm" (ngSubmit)="onSubmitJugador(reportar)">
+                              
                                   <table class="table align-items-center table-flush">
-
                                     <thead class="thead-light">
                                         <tr>
                                           <th scope="col">Jugador</th>
+                                          <th scope="col"></th>
                                           <th scope="col">Posicion</th>
+                                          <th scope="col">Calificacion</th>
                                           <th scope="col">Goles</th>
                                           <th scope="col">Asistencias</th>
                                           <th scope="col">Tarjetas</th>
                                         </tr>
                                       </thead>
                                       <tbody>
-                                        <tr>
+                                        <tr *ngFor="let rec of equipoArray">
                                           <th scope="row">
-                                            NicoPerez22
+                                            {{rec.nombre}}
                                           </th>
                                           <td>
-                                            35
+                                              <div class="input-group mb-3">
+                                                  <div class="input-group-prepend">
+                                                      <input type="checkbox" aria-label="Checkbox for following text input">
+                                                  </div>
+                                                </div>
                                           </td>
                                           <td>
                                             <div class="d-flex align-items-center">
-                                              <span class="mr-2">60%</span>
+                                              <span class="mr-2">
+                                                  <div class="form-group col-md-12">
+                                                      <select  id="posicion" class="form-control" tabindex="15" [(ngModel)]="jug.posicion" name="posicion">
+                                                      <option disabled>Seleccione Posicion</option>
+                                                      <option *ngFor="let tipo of tipoArray" [value]="tipo.nombre" [selected]="">{{tipo.nombre}}</option>
+                                                      </select>
+                                                    </div>
+                                              </span>
                                             </div>
                                           </td>
                                           <td>
                                               <div class="d-flex align-items-center">
-                                                <span class="mr-2">60%</span>
+                                                <span class="mr-2">
+                                                    <div class="form-group col-md-12">
+                                                        <select  id="posicion" class="form-control" tabindex="15" [(ngModel)]="jug.posicion" name="posicion">
+                                                        <option selected>Seleccione Clasificacion</option>
+                                                        <option *ngFor="let tipo of calificacionArray" [value]="tipo.nombre" [selected]="">{{tipo.nombre}}</option>
+                                                        </select>
+                                                    </div>
+                                                </span>
                                               </div>
                                             </td>
                                           <td>
                                               <div class="d-flex align-items-center">
-                                                  <span class="mr-2">60%</span>
+                                                  <span class="mr-2">
+                                                      <div class="form-group col-md-12">
+                                                          <select  id="posicion" class="form-control" tabindex="15" [(ngModel)]="jug.posicion" name="posicion">
+                                                          <option selected>Seleccione Posicion</option>
+                                                          <option>1</option>
+                                                          <option>2</option>
+                                                          <option>3</option>
+                                                          </select>
+                                                      </div>
+                                                  </span>
+                                                </div>
+                                          </td>
+                                          <td>
+                                              <div class="d-flex align-items-center">
+                                                  <span class="mr-2">
+                                                      <div class="form-group col-md-12">
+                                                          <select  id="posicion" class="form-control" tabindex="15" [(ngModel)]="jug.posicion" name="posicion">
+                                                          <option selected>Seleccione Posicion</option>
+                                                          <option>1</option>
+                                                          <option>2</option>
+                                                          <option>3</option>
+                                                          </select>
+                                                      </div>
+                                                  </span>
+                                                </div>
+                                          </td>
+                                          <td>
+                                              <div class="d-flex align-items-center">
+                                                  <span class="mr-2">
+                                                      <div class="form-group col-md-12">
+                                                          <select  id="posicion" class="form-control" tabindex="15" [(ngModel)]="jug.posicion" name="posicion">
+                                                          <option selected>Seleccione Tarjetas</option>
+                                                          <option>AMARILLA</option>
+                                                          <option>ROJA</option>
+                                                          </select>
+                                                      </div>
+                                                  </span>
                                                 </div>
                                           </td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">
-                                              NicoPerez22
-                                            </th>
-                                            <td>
-                                              35
-                                            </td>
-                                            <td>
-                                              <div class="d-flex align-items-center">
-                                                <span class="mr-2">60%</span>
-                                              </div>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                  <span class="mr-2">60%</span>
-                                                </div>
-                                              </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="mr-2">60%</span>
-                                                  </div>
-                                            </td>
-                                          </tr>                                          <tr>
-                                              <th scope="row">
-                                                NicoPerez22
-                                              </th>
-                                              <td>
-                                                35
-                                              </td>
-                                              <td>
-                                                <div class="d-flex align-items-center">
-                                                  <span class="mr-2">60%</span>
-                                                </div>
-                                              </td>
                                               <td>
                                                   <div class="d-flex align-items-center">
-                                                    <span class="mr-2">60%</span>
-                                                  </div>
-                                                </td>
-                                              <td>
-                                                  <div class="d-flex align-items-center">
-                                                      <span class="mr-2">60%</span>
-                                                    </div>
-                                              </td>
-                                            </tr>                                          <tr>
-                                                <th scope="row">
-                                                  NicoPerez22
-                                                </th>
-                                                <td>
-                                                  35
-                                                </td>
-                                                <td>
-                                                  <div class="d-flex align-items-center">
-                                                    <span class="mr-2">60%</span>
-                                                  </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                      <span class="mr-2">60%</span>
-                                                    </div>
-                                                  </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <span class="mr-2">60%</span>
-                                                    </div>
-                                                </td>
-                                              </tr>
-                                              <td>
-                                                  <div class="d-flex align-items-center">
-                                                      <button (click)="reporteConfirmado()" type="button" class="btn btn-success">Confirmar Reporte</button>
+                                                      <button type="submit" class="btn btn-success">Confirmar Reporte</button>
                                                   </div>
                                               </td>
                                       </tbody>
                                 </table>
+                            </form>
                           </div>
                         </div>
                 </div>
@@ -364,24 +279,25 @@
                                         </thead>
                                         <tbody>
 
+                                          <div class="form-group col-md-12">
                                             <div class="d-flex align-items-center">
-                                                <div class="form-group col-md-12">
-                                                    <img src="assets/img/theme/upload-cloud-outline.png"  width="42" height="42">
+                                                <div class="form-group col-md-4">
+                                                    <img src="assets/images/upload-cloud-outline.png"  width="42" height="42">
                                                 </div>
                                             </div>
                                             
                                             <div class="d-flex align-items-center">
-                                                <div class="form-group col-md-12">
-                                                    <img src="assets/img/theme/upload-cloud-outline.png"  width="42" height="42">
+                                                <div class="form-group col-md-4">
+                                                    <img src="assets/images/upload-cloud-outline.png"  width="42" height="42">
                                                 </div>
                                             </div>
                                             
                                             <div class="d-flex align-items-center">
-                                                <div class="form-group col-md-12">
-                                                    <img src="assets/img/theme/upload-cloud-outline.png"  width="42" height="42">
+                                                <div class="form-group col-md-4">
+                                                    <img src="assets/images/upload-cloud-outline.png"  width="42" height="42">
                                                 </div>
                                             </div>
-
+                                          </div>
 
 
                                         </tbody>
@@ -393,6 +309,9 @@
           </div>
         </div>
         </div>
+        <br>
+        <br>
+        <br>
 
         <script src="assets/js/jquery-3.2.1.min.js"></script>
         <script src="assets/styles/bootstrap4/popper.js"></script>
