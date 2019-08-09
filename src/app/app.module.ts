@@ -14,6 +14,16 @@ import { NavbarComponent } from './Shell/navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TorneoComponent } from './torneo/torneo.component';
+import { FooterComponent } from './Shell/footer/footer.component';
+import { FechasComponent } from './torneo/fechas/fechas.component';
+import { GoleadoresComponent } from './torneo/goleadores/goleadores.component';
+import { AsistenciasComponent } from './torneo/asistencias/asistencias.component';
+import { SancionesComponent } from './torneo/sanciones/sanciones.component';
+import { BsDropdownModule } from 'ngx-bootstrap';
+import { PlantillaComponent } from './administrar-equipo/plantilla/plantilla.component';
+import { EstadisticasEquipoComponent } from './administrar-equipo/estadisticas-equipo/estadisticas-equipo.component';
+import { CambiarlogoComponent } from './administrar-equipo/cambiarlogo/cambiarlogo.component';
+import { InvitarJugadorComponent } from './administrar-equipo/invitar-jugador/invitar-jugador.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +34,23 @@ import { TorneoComponent } from './torneo/torneo.component';
     LoginComponent,
     NavbarComponent,
     ProfileComponent,
-    TorneoComponent
+    TorneoComponent,
+    FooterComponent,
+    FechasComponent,
+    GoleadoresComponent,
+    AsistenciasComponent,
+    SancionesComponent,
+    PlantillaComponent,
+    EstadisticasEquipoComponent,
+    CambiarlogoComponent,
+    InvitarJugadorComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    BsDropdownModule.forRoot(),
     NgbModule,
     HttpClientModule,
     AppRoutingModule,

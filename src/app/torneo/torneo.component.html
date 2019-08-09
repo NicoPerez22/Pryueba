@@ -16,20 +16,30 @@
 <link rel="stylesheet" type="text/css" href="assets/styles/categories_responsive.css">
 </head>
 
+    <body class="algo"> 
+        
+    
         <app-navbar></app-navbar>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="fondoArriba" style="background-image:url(assets/images/575203.png)">
+            <h1 class="center">FIVAS PRIMERA DIVISION</h1>
+        </div>
+        <ul>
+                <li><a [routerLink]="['/torneo']" routerLinkActive="router-link-active">Tabla</a></li>
+                <li><a [routerLink]="['/torneo/fechas']" routerLinkActive="router-link-active">Proximos Partidos</a></li>
+                <li><a [routerLink]="['/torneo/goeladores']" routerLinkActive="router-link-active">Goleadores</a></li>
+                <li><a [routerLink]="['/torneo/asistencias']" routerLinkActive="router-link-active">Asistidores</a></li>
+                <li><a [routerLink]="['/torneo/sanciones']" routerLinkActive="router-link-active">Sanciones</a></li>
+        </ul>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
             <div class="alinear">
               <table class="table">
-                <thead class="thead-light">
+                <thead class="thead-dark">
                   <tr>
                     <th scope="col">Pos</th>
                     <th scope="col"></th>
@@ -43,24 +53,11 @@
                     <th scope="col">DIF</th>
                     <th scope="col">PJ</th>
                   </tr>
-                  <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                      </tr>
                 </thead>
-                <tbody>
+                <tbody class="colorFondo">
                   <tr *ngFor="let rec of equipoArray">
-                    <th scope="row">1</th>
-                    <td></td>
+                    <th scope="row">{{rec.id}}</th>
+                    <td style="font-size:24px;"></td>
                     <td>{{rec.nombre}}</td>
                     <td>Otto</td>
                     <td>@mdo</td>
@@ -83,6 +80,15 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
       
 <script src="assets/js/jquery-3.2.1.min.js"></script>
 <script src="assets/styles/bootstrap4/popper.js"></script>
@@ -92,6 +98,6 @@
 <script src="assets/plugins/easing/easing.js"></script>
 <script src="assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script src="assets/js/categories_custom.js"></script>
-
+</body>
 
 </html>
