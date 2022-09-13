@@ -58,7 +58,7 @@ body
 	line-height: 23px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #1e1e27;
+	color: white;
 }
 div
 {
@@ -537,7 +537,7 @@ section
 .main_nav_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: black;
 	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
 }
 .navbar
@@ -555,7 +555,7 @@ section
 .navbar_menu li a
 {
 	display: block;
-	color: #1e1e27;
+	color: white;
 	font-size: 13px;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -592,7 +592,7 @@ section
 	position: relative;
 	width: 40px;
 	height: 40px;
-	color: #1e1e27;
+	color: white;
 	-webkit-transition: color 0.3s ease;
 	-moz-transition: color 0.3s ease;
 	-ms-transition: color 0.3s ease;

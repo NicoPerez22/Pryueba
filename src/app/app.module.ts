@@ -19,7 +19,6 @@ import { FechasComponent } from './torneo/fechas/fechas.component';
 import { GoleadoresComponent } from './torneo/goleadores/goleadores.component';
 import { AsistenciasComponent } from './torneo/asistencias/asistencias.component';
 import { SancionesComponent } from './torneo/sanciones/sanciones.component';
-import { BsDropdownModule } from 'ngx-bootstrap';
 import { PlantillaComponent } from './administrar-equipo/plantilla/plantilla.component';
 import { EstadisticasEquipoComponent } from './administrar-equipo/estadisticas-equipo/estadisticas-equipo.component';
 import { CambiarlogoComponent } from './administrar-equipo/cambiarlogo/cambiarlogo.component';
@@ -50,7 +49,6 @@ import { InvitarJugadorComponent } from './administrar-equipo/invitar-jugador/in
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    BsDropdownModule.forRoot(),
     NgbModule,
     HttpClientModule,
     AppRoutingModule,
